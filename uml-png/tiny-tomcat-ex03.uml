@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.winston</OriginalElement>
+  <nodes>
+    <node x="0.0" y="408.0">com.winston.connector.http.HttpRequestLine</node>
+    <node x="505.63125" y="739.0">com.winston.connector.http.HttpConnector</node>
+    <node x="509.13125" y="652.0">com.winston.connector.http.HttpProcessor</node>
+    <node x="675.0253035714286" y="174.0">com.winston.connector.ResponseWriter</node>
+    <node x="425.67015476190477" y="0.0">com.winston.connector.http.Constants</node>
+    <node x="99.0" y="515.0">com.winston.connector.http.SocketInputStream</node>
+    <node x="548.8663750000001" y="515.0">com.winston.ServletProcessor</node>
+    <node x="1000.9603333333333" y="174.0">com.winston.connector.http.HttpRequest</node>
+    <node x="525.63125" y="826.0">com.winston.startup.Bootstrap</node>
+    <node x="990.9603333333333" y="87.0">com.winston.connector.RequestStream</node>
+    <node x="536.3353333333333" y="311.0">com.winston.connector.http.HttpResponse</node>
+    <node x="227.25" y="408.0">com.winston.connector.http.HttpHeader</node>
+    <node x="750.3353333333333" y="408.0">com.winston.connector.http.HttpRequestFacade</node>
+    <node x="509.3353333333333" y="408.0">com.winston.connector.http.HttpResponseFacade</node>
+    <node x="992.3353333333333" y="408.0">com.winston.StaticResourceProcessor</node>
+    <node x="467.0253035714286" y="174.0">com.winston.connector.ResponseStream</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.winston.connector.http.HttpResponseFacade" target="com.winston.connector.http.HttpResponse">
+      <point x="0.0" y="-18.5" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.ServletProcessor" target="com.winston.connector.http.HttpResponse">
+      <point x="-52.85714285714286" y="-18.5" />
+      <point x="588.5092321428572" y="485.0" />
+      <point x="498.8353333333333" y="485.0" />
+      <point x="498.8353333333333" y="388.0" />
+      <point x="586.4353333333333" y="388.0" />
+      <point x="-33.39999999999998" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.SocketInputStream" target="com.winston.connector.http.HttpRequestLine">
+      <point x="-69.0" y="-18.5" />
+      <point x="133.5" y="495.0" />
+      <point x="155.83333333333337" y="495.0" />
+      <point x="62.33333333333334" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpResponse" target="com.winston.connector.http.Constants">
+      <point x="10.4375" y="-18.5" />
+      <point x="630.2728333333333" y="241.0" />
+      <point x="664.5253035714286" y="241.0" />
+      <point x="664.5253035714286" y="67.0" />
+      <point x="511.29515476190477" y="67.0" />
+      <point x="17.125" y="18.5" />
+    </edge>
+    <edge source="com.winston.startup.Bootstrap" target="com.winston.connector.http.HttpConnector">
+      <point x="-33.75" y="-18.5" />
+      <point x="559.38125" y="801.0" />
+      <point x="549.38125" y="801.0" />
+      <point x="-43.75" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.ResponseStream" target="com.winston.connector.http.HttpResponse">
+      <point x="23.375" y="18.5" />
+      <point x="583.9003035714286" y="291.0" />
+      <point x="588.5228333333333" y="291.0" />
+      <point x="-31.3125" y="-18.5" />
+    </edge>
+    <edge source="com.winston.ServletProcessor" target="com.winston.connector.http.Constants">
+      <point x="-79.28571428571428" y="-18.5" />
+      <point x="562.0806607142858" y="495.0" />
+      <point x="387.75" y="495.0" />
+      <point x="387.75" y="67.0" />
+      <point x="477.04515476190477" y="67.0" />
+      <point x="-17.125" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.RequestStream" target="com.winston.connector.http.Constants">
+      <point x="0.0" y="-18.5" />
+      <point x="1078.9603333333334" y="57.0" />
+      <point x="545.5451547619048" y="57.0" />
+      <point x="51.375" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.HttpRequest">
+      <point x="67.19999999999999" y="-18.5" />
+      <point x="660.3312500000001" y="622.0" />
+      <point x="1258.8353333333334" y="622.0" />
+      <point x="1258.8353333333334" y="271.0" />
+      <point x="1127.7103333333334" y="271.0" />
+      <point x="48.75" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.HttpResponse">
+      <point x="22.400000000000006" y="-18.5" />
+      <point x="615.53125" y="582.0" />
+      <point x="970.8353333333333" y="582.0" />
+      <point x="970.8353333333333" y="378.0" />
+      <point x="653.2353333333333" y="378.0" />
+      <point x="33.400000000000034" y="18.5" />
+    </edge>
+    <edge source="com.winston.StaticResourceProcessor" target="com.winston.connector.http.HttpRequest">
+      <point x="61.25" y="-18.5" />
+      <point x="1176.0853333333334" y="291.0" />
+      <point x="1088.7103333333334" y="291.0" />
+      <point x="9.75" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.SocketInputStream" target="com.winston.connector.http.HttpHeader">
+      <point x="69.0" y="-18.5" />
+      <point x="271.5" y="495.0" />
+      <point x="252.25" y="495.0" />
+      <point x="-50.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpConnector" target="com.winston.connector.http.HttpProcessor">
+      <point x="-65.625" y="-18.5" />
+      <point x="527.50625" y="714.0" />
+      <point x="530.13125" y="714.0" />
+      <point x="-63.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.StaticResourceProcessor" target="com.winston.connector.http.HttpResponse">
+      <point x="-61.25" y="-18.5" />
+      <point x="1053.5853333333334" y="368.0" />
+      <point x="686.6353333333334" y="368.0" />
+      <point x="66.80000000000001" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.HttpConnector">
+      <point x="21.0" y="18.5" />
+      <point x="21.875" y="-18.5" />
+    </edge>
+    <edge source="com.winston.ServletProcessor" target="com.winston.connector.http.HttpRequestFacade">
+      <point x="26.428571428571416" y="-18.5" />
+      <point x="667.7949464285715" y="475.0" />
+      <point x="802.8353333333333" y="475.0" />
+      <point x="-52.5" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpRequest" target="com.winston.connector.RequestStream">
+      <point x="-39.0" y="-18.5" />
+      <point x="1039.9603333333334" y="149.0" />
+      <point x="1034.9603333333334" y="149.0" />
+      <point x="-44.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.HttpHeader">
+      <point x="-33.599999999999994" y="-18.5" />
+      <point x="559.53125" y="592.0" />
+      <point x="321.75" y="592.0" />
+      <point x="321.75" y="495.0" />
+      <point x="302.25" y="495.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.SocketInputStream" target="com.winston.connector.http.Constants">
+      <point x="0.0" y="-18.5" />
+      <point x="202.5" y="57.0" />
+      <point x="442.79515476190477" y="57.0" />
+      <point x="-51.375" y="18.5" />
+    </edge>
+    <edge source="com.winston.ServletProcessor" target="com.winston.connector.http.HttpRequest">
+      <point x="79.28571428571428" y="-18.5" />
+      <point x="720.6520892857143" y="495.0" />
+      <point x="981.8353333333333" y="495.0" />
+      <point x="981.8353333333333" y="291.0" />
+      <point x="1069.2103333333334" y="291.0" />
+      <point x="-9.75" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpResponse" target="com.winston.connector.ResponseWriter">
+      <point x="31.3125" y="-18.5" />
+      <point x="651.1478333333333" y="251.0" />
+      <point x="765.0253035714286" y="251.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.RequestStream" target="com.winston.connector.http.HttpRequest">
+      <point x="44.0" y="18.5" />
+      <point x="1122.9603333333334" y="149.0" />
+      <point x="1117.9603333333334" y="149.0" />
+      <point x="39.0" y="-18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.HttpRequestLine">
+      <point x="-67.19999999999996" y="-18.5" />
+      <point x="525.9312500000001" y="622.0" />
+      <point x="67.83333333333337" y="622.0" />
+      <point x="67.83333333333337" y="495.0" />
+      <point x="93.5" y="495.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.ServletProcessor" target="com.winston.connector.http.HttpResponseFacade">
+      <point x="-26.428571428571445" y="-18.5" />
+      <point x="614.9378035714286" y="475.0" />
+      <point x="564.5853333333333" y="475.0" />
+      <point x="-55.25" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.ServletProcessor">
+      <point x="1.4210854715202004E-14" y="-18.5" />
+      <point x="593.13125" y="632.0" />
+      <point x="595.1163750000001" y="632.0" />
+      <point x="-46.25" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpResponse" target="com.winston.connector.http.HttpRequest">
+      <point x="52.1875" y="-18.5" />
+      <point x="672.0228333333333" y="261.0" />
+      <point x="1010.7103333333333" y="261.0" />
+      <point x="-68.25" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.SocketInputStream">
+      <point x="-44.79999999999998" y="-18.5" />
+      <point x="548.3312500000001" y="602.0" />
+      <point x="254.25" y="602.0" />
+      <point x="51.75" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpResponse" target="com.winston.connector.ResponseStream">
+      <point x="-52.1875" y="-18.5" />
+      <point x="567.6478333333333" y="281.0" />
+      <point x="537.1503035714286" y="281.0" />
+      <point x="-23.375" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.StaticResourceProcessor">
+      <point x="33.60000000000001" y="-18.5" />
+      <point x="626.73125" y="592.0" />
+      <point x="1103.93125" y="592.0" />
+      <point x="1103.93125" y="495.0" />
+      <point x="1053.5853333333334" y="495.0" />
+      <point x="-61.25" y="18.5" />
+    </edge>
+    <edge source="com.winston.connector.http.HttpRequestFacade" target="com.winston.connector.http.HttpRequest">
+      <point x="0.0" y="-18.5" />
+      <point x="855.3353333333333" y="388.0" />
+      <point x="883.3128035714286" y="388.0" />
+      <point x="883.3128035714286" y="281.0" />
+      <point x="1049.7103333333334" y="281.0" />
+      <point x="-29.25" y="18.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0804170444242975" x="629.6391709322816" y="450.40865989762517" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
