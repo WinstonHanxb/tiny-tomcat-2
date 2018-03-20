@@ -27,7 +27,7 @@
       <point x="0.0" y="18.5" />
     </edge>
     <edge source="com.winston.ServletProcessor" target="com.winston.connector.http.HttpResponse">
-      <point x="-52.85714285714286" y="-18.5" />
+      <point x="-52.85714285714289" y="-18.5" />
       <point x="588.5092321428572" y="485.0" />
       <point x="498.8353333333333" y="485.0" />
       <point x="498.8353333333333" y="388.0" />
@@ -61,7 +61,7 @@
       <point x="-31.3125" y="-18.5" />
     </edge>
     <edge source="com.winston.ServletProcessor" target="com.winston.connector.http.Constants">
-      <point x="-79.28571428571428" y="-18.5" />
+      <point x="-79.28571428571422" y="-18.5" />
       <point x="562.0806607142858" y="495.0" />
       <point x="387.75" y="495.0" />
       <point x="387.75" y="67.0" />
@@ -75,7 +75,7 @@
       <point x="51.375" y="18.5" />
     </edge>
     <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.HttpRequest">
-      <point x="67.19999999999999" y="-18.5" />
+      <point x="67.20000000000005" y="-18.5" />
       <point x="660.3312500000001" y="622.0" />
       <point x="1258.8353333333334" y="622.0" />
       <point x="1258.8353333333334" y="271.0" />
@@ -83,12 +83,12 @@
       <point x="48.75" y="18.5" />
     </edge>
     <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.HttpResponse">
-      <point x="22.400000000000006" y="-18.5" />
+      <point x="22.399999999999977" y="-18.5" />
       <point x="615.53125" y="582.0" />
       <point x="970.8353333333333" y="582.0" />
       <point x="970.8353333333333" y="378.0" />
       <point x="653.2353333333333" y="378.0" />
-      <point x="33.400000000000034" y="18.5" />
+      <point x="33.39999999999998" y="18.5" />
     </edge>
     <edge source="com.winston.StaticResourceProcessor" target="com.winston.connector.http.HttpRequest">
       <point x="61.25" y="-18.5" />
@@ -112,14 +112,14 @@
       <point x="-61.25" y="-18.5" />
       <point x="1053.5853333333334" y="368.0" />
       <point x="686.6353333333334" y="368.0" />
-      <point x="66.80000000000001" y="18.5" />
+      <point x="66.80000000000007" y="18.5" />
     </edge>
     <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.HttpConnector">
       <point x="21.0" y="18.5" />
       <point x="21.875" y="-18.5" />
     </edge>
     <edge source="com.winston.ServletProcessor" target="com.winston.connector.http.HttpRequestFacade">
-      <point x="26.428571428571416" y="-18.5" />
+      <point x="26.428571428571445" y="-18.5" />
       <point x="667.7949464285715" y="475.0" />
       <point x="802.8353333333333" y="475.0" />
       <point x="-52.5" y="18.5" />
@@ -131,7 +131,7 @@
       <point x="-44.0" y="18.5" />
     </edge>
     <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.HttpHeader">
-      <point x="-33.599999999999994" y="-18.5" />
+      <point x="-33.60000000000002" y="-18.5" />
       <point x="559.53125" y="592.0" />
       <point x="321.75" y="592.0" />
       <point x="321.75" y="495.0" />
@@ -145,7 +145,7 @@
       <point x="-51.375" y="18.5" />
     </edge>
     <edge source="com.winston.ServletProcessor" target="com.winston.connector.http.HttpRequest">
-      <point x="79.28571428571428" y="-18.5" />
+      <point x="79.28571428571422" y="-18.5" />
       <point x="720.6520892857143" y="495.0" />
       <point x="981.8353333333333" y="495.0" />
       <point x="981.8353333333333" y="291.0" />
@@ -165,10 +165,10 @@
       <point x="39.0" y="-18.5" />
     </edge>
     <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.HttpRequestLine">
-      <point x="-67.19999999999996" y="-18.5" />
+      <point x="-67.19999999999993" y="-18.5" />
       <point x="525.9312500000001" y="622.0" />
-      <point x="67.83333333333337" y="622.0" />
-      <point x="67.83333333333337" y="495.0" />
+      <point x="67.83333333333326" y="622.0" />
+      <point x="67.83333333333326" y="495.0" />
       <point x="93.5" y="495.0" />
       <point x="0.0" y="18.5" />
     </edge>
@@ -179,7 +179,7 @@
       <point x="-55.25" y="18.5" />
     </edge>
     <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.ServletProcessor">
-      <point x="1.4210854715202004E-14" y="-18.5" />
+      <point x="0.0" y="-18.5" />
       <point x="593.13125" y="632.0" />
       <point x="595.1163750000001" y="632.0" />
       <point x="-46.25" y="18.5" />
@@ -191,7 +191,7 @@
       <point x="-68.25" y="18.5" />
     </edge>
     <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.connector.http.SocketInputStream">
-      <point x="-44.79999999999998" y="-18.5" />
+      <point x="-44.799999999999955" y="-18.5" />
       <point x="548.3312500000001" y="602.0" />
       <point x="254.25" y="602.0" />
       <point x="51.75" y="18.5" />
@@ -203,7 +203,7 @@
       <point x="-23.375" y="18.5" />
     </edge>
     <edge source="com.winston.connector.http.HttpProcessor" target="com.winston.StaticResourceProcessor">
-      <point x="33.60000000000001" y="-18.5" />
+      <point x="33.60000000000002" y="-18.5" />
       <point x="626.73125" y="592.0" />
       <point x="1103.93125" y="592.0" />
       <point x="1103.93125" y="495.0" />
@@ -219,8 +219,10 @@
       <point x="-29.25" y="18.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0804170444242975" x="629.6391709322816" y="450.40865989762517" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="1.0804170444242975" x="630.0" y="450.0" />
+  <SelectedNodes>
+    <node>com.winston.connector.http.HttpRequestLine</node>
+  </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>
   <VISIBILITY>public</VISIBILITY>

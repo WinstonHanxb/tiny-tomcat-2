@@ -9,7 +9,7 @@ import java.io.InputStream;
 /**
  * Extends InputStream to be more efficient reading lines during HTTP
  * header processing.
- * 将InputStream包装成SocketInputStream
+ *
  * @author <a href="mailto:remm@apache.org">Remy Maucherat</a>
  * @deprecated
  */
@@ -285,7 +285,7 @@ public class SocketInputStream extends InputStream {
      * function is meant to be used during the HTTP request header parsing.
      * Do NOT attempt to read the request body using it.
      *
-     * @param   line object
+     * @param requestLine Request line object
      * @throws IOException If an exception occurs during the underlying socket
      * read operations, or if the given buffer is not big enough to accomodate
      * the whole line.

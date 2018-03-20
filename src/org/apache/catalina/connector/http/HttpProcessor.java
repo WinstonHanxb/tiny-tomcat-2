@@ -288,6 +288,8 @@ final class HttpProcessor
     synchronized void assign(Socket socket) {
 
         // Wait for the Processor to get the previous Socket
+        // 初次被调用assign的时候，available为false
+        // 因此不会进入循环体
         while (available) {
             try {
                 wait();
@@ -298,6 +300,7 @@ final class HttpProcessor
         // Store the newly available Socket and notify our thread
         this.socket = socket;
         available = true;
+        //这个notify会通知前面的await方法苏醒
         notifyAll();
 
         if ((debug >= 1) && (socket != null))
@@ -318,6 +321,7 @@ final class HttpProcessor
         // Wait for the Connector to provide a new Socket
         while (!available) {
             try {
+                //这个wait会暂停自己的执行，直到接收到一个新的socket为止
                 wait();
             } catch (InterruptedException e) {
             }
@@ -325,6 +329,8 @@ final class HttpProcessor
 
         // Notify the Connector that we have received this Socket
         Socket socket = this.socket;
+        //使用一个局部变量保存了这个socket，再将available设为false
+        //此时如果有新的socket进入，assign会停止
         available = false;
         notifyAll();
 
@@ -876,6 +882,7 @@ final class HttpProcessor
      * @param socket The socket on which we are connected to the client
      */
     private void process(Socket socket) {
+        //ok是没有错误的标志
         boolean ok = true;
         boolean finishResponse = true;
         SocketInputStream input = null;
@@ -890,6 +897,7 @@ final class HttpProcessor
             ok = false;
         }
 
+        //keepAlive参数
         keepAlive = true;
 
         while (!stopped && ok && keepAlive) {
@@ -922,6 +930,7 @@ final class HttpProcessor
                     if (http11) {
                         // Sending a request acknowledge back to the client if
                         // requested.
+                        // 如果是http1.1则要返回确认内容
                         ackRequest(output);
                         // If the protocol is HTTP/1.1, chunking is allowed.
                         if (connector.isChunkingAllowed())
