@@ -5,6 +5,7 @@
 - 2018-3-20日 完成第三章
 
 - 2018-3-20日 完成第四章
+
 1.Connector是一个守护线程，一个connector和container是一一绑定的
 2.Connector维护了一个 minProcessors 到 maxProcessors数量之间的一个processors栈,processors栈中保存了所有空闲的processor
 3.LifeCycle接口规定了一系列生命周期的行为，包括start(),stop()以及添加查询和删除监听器
@@ -12,6 +13,7 @@
 5.HttpProcessor内部利用wait和notifyAll实现了异步互相通知（主要涉及的函数为await和assign）
 
 - 2018-3-21 完成第五章
+
 1.Container和Connector是一对一的，在tomcat中一共有四种类型的container：engine，host，context，wrapper
      * engine：表示tomcat的整个servlet引擎；
      * host：表示包含有一个或多个context的虚拟机；
@@ -25,6 +27,7 @@
 6.mapper在各个container之中用来映射每一级container和下一级的container的映射关系
    
 - 2018-3-21 完成第六章
+
 1.Lifecycle接口，规定了生命周期，包括start、stop函数和对应的六个事件，通过实现这个接口，完成对组件的生命周期进行控制
     1. 一个请求进来了，空闲的processor会监听到这个socket,processor会回调注册在connector中的container来处理
     2. 在container中，会使用pipeline来逐个调用value
