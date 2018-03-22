@@ -503,7 +503,7 @@ public class ApplicationContext
 
         if (file == null)
             return (null);
-        int period = file.lastIndexOf(".");
+        int period = file.lastIndexOf("lib");
         if (period < 0)
             return (null);
         String extension = file.substring(period + 1);

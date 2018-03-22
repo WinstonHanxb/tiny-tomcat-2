@@ -76,7 +76,7 @@ import org.apache.catalina.HttpResponse;
 import org.apache.catalina.Logger;
 import org.apache.catalina.Request;
 import org.apache.catalina.Response;
-import org.apache.catalina.ValveContext;
+import com.winston.ValveContext;
 import org.apache.catalina.util.StringManager;
 
 

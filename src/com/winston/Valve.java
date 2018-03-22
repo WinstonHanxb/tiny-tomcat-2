@@ -62,8 +62,11 @@
  */
 
 
-package org.apache.catalina;
+package com.winston;
 
+
+import org.apache.catalina.Request;
+import org.apache.catalina.Response;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

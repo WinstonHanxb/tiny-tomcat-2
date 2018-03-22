@@ -80,7 +80,7 @@ import org.apache.catalina.ContainerServlet;
 import org.apache.catalina.Context;
 import org.apache.catalina.InstanceEvent;
 import org.apache.catalina.InstanceListener;
-import org.apache.catalina.LifecycleException;
+import com.winston.LifecycleException;
 import org.apache.catalina.Loader;
 import org.apache.catalina.Wrapper;
 import org.apache.catalina.connector.HttpRequestBase;
@@ -1020,7 +1020,7 @@ System.out.println("after calling setWrapper");
         StringBuffer sb = new StringBuffer();
         if (getParent() != null) {
             sb.append(getParent().toString());
-            sb.append(".");
+            sb.append("lib");
         }
         sb.append("StandardWrapper[");
         sb.append(getName());

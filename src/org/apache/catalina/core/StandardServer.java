@@ -96,19 +96,19 @@ import org.apache.catalina.Context;
 import org.apache.catalina.DefaultContext;
 import org.apache.catalina.Engine;
 import org.apache.catalina.Host;
-import org.apache.catalina.Lifecycle;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.LifecycleListener;
+import com.winston.Lifecycle;
+import com.winston.LifecycleException;
+import com.winston.LifecycleListener;
 import org.apache.catalina.Loader;
 import org.apache.catalina.Logger;
-import org.apache.catalina.Manager;
-import org.apache.catalina.Pipeline;
+import com.winston.Manager;
+import com.winston.Pipeline;
 import org.apache.catalina.Realm;
 import org.apache.catalina.Server;
 import org.apache.catalina.ServerFactory;
 import org.apache.catalina.Service;
 import org.apache.catalina.Store;
-import org.apache.catalina.Valve;
+import com.winston.Valve;
 import org.apache.catalina.deploy.ApplicationParameter;
 import org.apache.catalina.deploy.NamingResources;
 import org.apache.catalina.deploy.ContextEjb;
@@ -722,7 +722,7 @@ public final class StandardServer
         String ts = (new Timestamp(System.currentTimeMillis())).toString();
         //        yyyy-mm-dd hh:mm:ss
         //        0123456789012345678
-        StringBuffer sb = new StringBuffer(".");
+        StringBuffer sb = new StringBuffer("lib");
         sb.append(ts.substring(0, 10));
         sb.append('.');
         sb.append(ts.substring(11, 13));

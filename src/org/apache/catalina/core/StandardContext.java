@@ -94,10 +94,10 @@ import org.apache.catalina.Context;
 import org.apache.catalina.Host;
 import org.apache.catalina.Globals;
 import org.apache.catalina.InstanceListener;
-import org.apache.catalina.Lifecycle;
-import org.apache.catalina.LifecycleEvent;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.LifecycleListener;
+import com.winston.Lifecycle;
+import com.winston.LifecycleEvent;
+import com.winston.LifecycleException;
+import com.winston.LifecycleListener;
 import org.apache.catalina.Loader;
 import org.apache.catalina.Mapper;
 import org.apache.catalina.Request;
@@ -3666,7 +3666,7 @@ public class StandardContext
         StringBuffer sb = new StringBuffer();
         if (getParent() != null) {
             sb.append(getParent().toString());
-            sb.append(".");
+            sb.append("lib");
         }
         sb.append("StandardContext[");
         sb.append(getName());

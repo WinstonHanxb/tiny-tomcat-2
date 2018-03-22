@@ -95,9 +95,9 @@ import javax.naming.directory.DirContext;
 import javax.naming.NamingException;
 import javax.naming.NameClassPair;
 
-import org.apache.catalina.Lifecycle;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.LifecycleListener;
+import com.winston.Lifecycle;
+import com.winston.LifecycleException;
+import com.winston.LifecycleListener;
 
 import org.apache.naming.JndiPermission;
 import org.apache.naming.resources.ResourceAttributes;

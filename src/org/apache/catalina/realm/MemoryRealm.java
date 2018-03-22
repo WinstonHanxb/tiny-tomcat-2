@@ -70,7 +70,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.apache.catalina.Container;
-import org.apache.catalina.LifecycleException;
+import com.winston.LifecycleException;
 import org.apache.catalina.util.StringManager;
 import org.apache.commons.digester.Digester;
 

@@ -67,7 +67,7 @@ package org.apache.catalina.mbeans;
 import javax.management.MBeanException;
 import javax.management.MBeanServer;
 import javax.management.RuntimeOperationsException;
-import org.apache.catalina.Valve;
+import com.winston.Valve;
 import org.apache.catalina.core.StandardHost;
 import org.apache.commons.modeler.BaseModelMBean;
 import org.apache.commons.modeler.Registry;

@@ -23,7 +23,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.catalina.Globals;
 import org.apache.catalina.HttpRequest;
 import org.apache.catalina.Logger;
-import org.apache.catalina.Manager;
+import com.winston.Manager;
 import org.apache.catalina.Realm;
 import org.apache.catalina.Session;
 import org.apache.catalina.util.Enumerator;

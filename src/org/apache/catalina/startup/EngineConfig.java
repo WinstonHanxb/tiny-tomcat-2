@@ -65,9 +65,9 @@
 package org.apache.catalina.startup;
 
 import org.apache.catalina.Engine;
-import org.apache.catalina.Lifecycle;
-import org.apache.catalina.LifecycleEvent;
-import org.apache.catalina.LifecycleListener;
+import com.winston.Lifecycle;
+import com.winston.LifecycleEvent;
+import com.winston.LifecycleListener;
 import org.apache.catalina.Logger;
 import org.apache.catalina.core.StandardEngine;
 import org.apache.catalina.util.StringManager;

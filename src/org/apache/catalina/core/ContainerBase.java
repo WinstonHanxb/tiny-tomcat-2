@@ -83,18 +83,18 @@ import org.apache.catalina.Cluster;
 import org.apache.catalina.Container;
 import org.apache.catalina.ContainerEvent;
 import org.apache.catalina.ContainerListener;
-import org.apache.catalina.Lifecycle;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.LifecycleListener;
+import com.winston.Lifecycle;
+import com.winston.LifecycleException;
+import com.winston.LifecycleListener;
 import org.apache.catalina.Loader;
 import org.apache.catalina.Logger;
-import org.apache.catalina.Manager;
+import com.winston.Manager;
 import org.apache.catalina.Mapper;
-import org.apache.catalina.Pipeline;
+import com.winston.Pipeline;
 import org.apache.catalina.Realm;
 import org.apache.catalina.Request;
 import org.apache.catalina.Response;
-import org.apache.catalina.Valve;
+import com.winston.Valve;
 import org.apache.catalina.util.StringManager;
 
 
@@ -991,6 +991,7 @@ public abstract class ContainerBase
      */
     public void invoke(Request request, Response response)
         throws IOException, ServletException {
+        //注意container中的invoke就是调用pipeline来执行的
         pipeline.invoke(request, response);
     }
 
@@ -1446,7 +1447,7 @@ public abstract class ContainerBase
     protected String logName() {
 
         String className = this.getClass().getName();
-        int period = className.lastIndexOf(".");
+        int period = className.lastIndexOf("lib");
         if (period >= 0)
             className = className.substring(period + 1);
         return (className + "[" + getName() + "]");

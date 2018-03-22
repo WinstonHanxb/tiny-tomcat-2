@@ -70,7 +70,7 @@ import org.apache.catalina.Context;
 import org.apache.catalina.DefaultContext;
 import org.apache.catalina.Engine;
 import org.apache.catalina.Host;
-import org.apache.catalina.LifecycleException;
+import com.winston.LifecycleException;
 import org.apache.catalina.Service;
 import org.apache.catalina.util.ServerInfo;
 

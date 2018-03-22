@@ -73,7 +73,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.catalina.Globals;
 import org.apache.catalina.HttpRequest;
 import org.apache.catalina.HttpResponse;
-import org.apache.catalina.LifecycleException;
+import com.winston.LifecycleException;
 import org.apache.catalina.deploy.LoginConfig;
 
 

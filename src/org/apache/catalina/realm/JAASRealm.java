@@ -73,7 +73,7 @@ import javax.security.auth.login.CredentialExpiredException;
 import javax.security.auth.login.FailedLoginException;
 import javax.security.auth.login.LoginContext;
 import javax.security.auth.login.LoginException;
-import org.apache.catalina.LifecycleException;
+import com.winston.LifecycleException;
 import org.apache.catalina.util.StringManager;
 
 

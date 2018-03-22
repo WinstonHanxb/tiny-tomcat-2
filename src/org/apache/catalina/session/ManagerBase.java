@@ -77,7 +77,7 @@ import org.apache.catalina.Container;
 import org.apache.catalina.DefaultContext;
 import org.apache.catalina.Engine;
 import org.apache.catalina.Logger;
-import org.apache.catalina.Manager;
+import com.winston.Manager;
 import org.apache.catalina.Session;
 import org.apache.catalina.util.StringManager;
 

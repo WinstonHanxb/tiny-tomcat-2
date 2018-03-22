@@ -63,8 +63,8 @@
 package org.apache.catalina.startup;
 
 
-import org.apache.catalina.Lifecycle;
-import org.apache.catalina.LifecycleListener;
+import com.winston.Lifecycle;
+import com.winston.LifecycleListener;
 import org.apache.commons.digester.Digester;
 import org.apache.commons.digester.Rule;
 import org.xml.sax.Attributes;

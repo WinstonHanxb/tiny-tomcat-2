@@ -75,7 +75,7 @@ import org.apache.catalina.Request;
 import org.apache.catalina.Response;
 import org.apache.regexp.RE;
 import org.apache.regexp.RESyntaxException;
-import org.apache.catalina.ValveContext;
+import com.winston.ValveContext;
 import org.apache.catalina.util.StringManager;
 
 

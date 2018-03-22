@@ -70,15 +70,15 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import javax.naming.directory.DirContext;
 
-import org.apache.catalina.Lifecycle;
+import com.winston.Lifecycle;
 import org.apache.naming.ContextAccessController;
 import org.apache.catalina.Container;
 import org.apache.catalina.Context;
 import org.apache.catalina.DefaultContext;
-import org.apache.catalina.LifecycleEvent;
-import org.apache.catalina.LifecycleListener;
+import com.winston.LifecycleEvent;
+import com.winston.LifecycleListener;
 import org.apache.catalina.Loader;
-import org.apache.catalina.Manager;
+import com.winston.Manager;
 import org.apache.catalina.deploy.ApplicationParameter;
 import org.apache.catalina.deploy.ContextEjb;
 import org.apache.catalina.deploy.ContextEnvironment;
@@ -1414,7 +1414,7 @@ public class StandardDefaultContext
         StringBuffer sb = new StringBuffer();
         if (getParent() != null) {
             sb.append(getParent().toString());
-            sb.append(".");
+            sb.append("lib");
         }
         sb.append("DefaultContext[");
         sb.append("]");

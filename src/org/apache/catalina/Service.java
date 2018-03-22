@@ -65,6 +65,8 @@
 package org.apache.catalina;
 
 
+import com.winston.LifecycleException;
+
 /**
  * A <strong>Service</strong> is a group of one or more
  * <strong>Connectors</strong> that share a single <strong>Container</strong>

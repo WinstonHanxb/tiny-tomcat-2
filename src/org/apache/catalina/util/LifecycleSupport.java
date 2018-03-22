@@ -65,9 +65,9 @@
 package org.apache.catalina.util;
 
 
-import org.apache.catalina.Lifecycle;
-import org.apache.catalina.LifecycleEvent;
-import org.apache.catalina.LifecycleListener;
+import com.winston.Lifecycle;
+import com.winston.LifecycleEvent;
+import com.winston.LifecycleListener;
 
 
 /**

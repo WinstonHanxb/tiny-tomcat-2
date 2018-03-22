@@ -72,8 +72,8 @@ import org.apache.catalina.Context;
 import org.apache.catalina.DefaultContext;
 import org.apache.catalina.Deployer;
 import org.apache.catalina.Host;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.Valve;
+import com.winston.LifecycleException;
+import com.winston.Valve;
 import org.apache.catalina.valves.ErrorDispatcherValve;
 
 
@@ -118,7 +118,7 @@ public class StandardHost
     /**
      * The application root for this Host.
      */
-    private String appBase = ".";
+    private String appBase = "lib";
 
 
     /**
@@ -690,7 +690,7 @@ public class StandardHost
         StringBuffer sb = new StringBuffer();
         if (getParent() != null) {
             sb.append(getParent().toString());
-            sb.append(".");
+            sb.append("lib");
         }
         sb.append("StandardHost[");
         sb.append(getName());

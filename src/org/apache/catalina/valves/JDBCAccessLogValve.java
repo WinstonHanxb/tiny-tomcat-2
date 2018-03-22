@@ -68,10 +68,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.catalina.Request;
 import org.apache.catalina.Response;
 import org.apache.catalina.HttpResponse;
-import org.apache.catalina.ValveContext;
-import org.apache.catalina.Lifecycle;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.LifecycleListener;
+import com.winston.ValveContext;
+import com.winston.Lifecycle;
+import com.winston.LifecycleException;
+import com.winston.LifecycleListener;
 import org.apache.catalina.util.LifecycleSupport;
 import org.apache.catalina.util.StringManager;
 

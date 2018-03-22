@@ -68,7 +68,6 @@ import java.security.Principal;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.List;
 import javax.naming.Context;
 import javax.naming.NameNotFoundException;
@@ -83,7 +82,7 @@ import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
 import javax.naming.directory.SearchControls;
 import javax.naming.directory.SearchResult;
-import org.apache.catalina.LifecycleException;
+import com.winston.LifecycleException;
 
 
 /**

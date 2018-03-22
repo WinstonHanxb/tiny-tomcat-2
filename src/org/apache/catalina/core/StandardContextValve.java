@@ -73,7 +73,7 @@ import org.apache.catalina.Context;
 import org.apache.catalina.HttpRequest;
 import org.apache.catalina.Request;
 import org.apache.catalina.Response;
-import org.apache.catalina.ValveContext;
+import com.winston.ValveContext;
 import org.apache.catalina.Wrapper;
 import org.apache.catalina.util.StringManager;
 import org.apache.catalina.valves.ValveBase;

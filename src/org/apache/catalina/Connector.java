@@ -1,5 +1,6 @@
 package org.apache.catalina;
 
+import com.winston.LifecycleException;
 import org.apache.catalina.net.ServerSocketFactory;
 
 /**

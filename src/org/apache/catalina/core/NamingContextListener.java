@@ -75,7 +75,7 @@ import javax.naming.Reference;
 import javax.naming.StringRefAddr;
 
 import org.apache.catalina.ContainerEvent;
-import org.apache.catalina.Lifecycle;
+import com.winston.Lifecycle;
 import org.apache.catalina.Logger;
 import org.apache.catalina.Server;
 import org.apache.naming.NamingContext;
@@ -89,8 +89,8 @@ import org.apache.naming.TransactionRef;
 import org.apache.catalina.Container;
 import org.apache.catalina.ContainerListener;
 import org.apache.catalina.Context;
-import org.apache.catalina.LifecycleEvent;
-import org.apache.catalina.LifecycleListener;
+import com.winston.LifecycleEvent;
+import com.winston.LifecycleListener;
 import org.apache.catalina.deploy.ContextEjb;
 import org.apache.catalina.deploy.ContextEnvironment;
 import org.apache.catalina.deploy.ContextLocalEjb;
@@ -1123,7 +1123,7 @@ public class NamingContextListener
     protected String logName() {
 
         String className = this.getClass().getName();
-        int period = className.lastIndexOf(".");
+        int period = className.lastIndexOf("lib");
         if (period >= 0)
             className = className.substring(period + 1);
         return (className + "[" + getName() + "]");

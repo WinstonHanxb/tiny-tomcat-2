@@ -66,6 +66,8 @@ package org.apache.catalina;
 
 import java.beans.PropertyChangeListener;
 import javax.naming.directory.DirContext;
+
+import com.winston.Manager;
 import org.apache.catalina.deploy.ApplicationParameter;
 import org.apache.catalina.deploy.ContextEjb;
 import org.apache.catalina.deploy.ContextEnvironment;
