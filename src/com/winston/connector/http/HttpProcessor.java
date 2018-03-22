@@ -4,6 +4,7 @@ package com.winston.connector.http;
 import com.winston.Lifecycle;
 import com.winston.LifecycleException;
 import com.winston.LifecycleListener;
+import com.winston.Logger;
 import org.apache.catalina.*;
 import org.apache.catalina.util.*;
 

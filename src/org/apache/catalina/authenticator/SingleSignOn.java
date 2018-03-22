@@ -77,7 +77,7 @@ import org.apache.catalina.HttpResponse;
 import com.winston.Lifecycle;
 import com.winston.LifecycleException;
 import com.winston.LifecycleListener;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import org.apache.catalina.Request;
 import org.apache.catalina.Response;
 import org.apache.catalina.Session;

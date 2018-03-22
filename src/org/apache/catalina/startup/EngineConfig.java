@@ -68,7 +68,7 @@ import org.apache.catalina.Engine;
 import com.winston.Lifecycle;
 import com.winston.LifecycleEvent;
 import com.winston.LifecycleListener;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import org.apache.catalina.core.StandardEngine;
 import org.apache.catalina.util.StringManager;
 

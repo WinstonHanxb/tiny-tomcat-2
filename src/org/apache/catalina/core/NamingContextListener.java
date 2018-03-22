@@ -76,7 +76,7 @@ import javax.naming.StringRefAddr;
 
 import org.apache.catalina.ContainerEvent;
 import com.winston.Lifecycle;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import org.apache.catalina.Server;
 import org.apache.naming.NamingContext;
 import org.apache.naming.ContextBindings;

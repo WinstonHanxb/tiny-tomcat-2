@@ -78,7 +78,7 @@ import org.apache.catalina.Engine;
 import org.apache.catalina.Globals;
 import org.apache.catalina.Host;
 import org.apache.catalina.Loader;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import com.winston.Manager;
 import com.winston.Lifecycle;
 import com.winston.LifecycleEvent;

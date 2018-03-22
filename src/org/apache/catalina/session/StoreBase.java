@@ -71,7 +71,7 @@ import org.apache.catalina.Container;
 import com.winston.Lifecycle;
 import com.winston.LifecycleException;
 import com.winston.LifecycleListener;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import com.winston.Manager;
 import org.apache.catalina.Store;
 import org.apache.catalina.util.LifecycleSupport;

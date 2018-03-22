@@ -63,7 +63,7 @@
 
 package org.apache.catalina.cluster;
 
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import org.apache.catalina.util.StringManager;
 
 /**

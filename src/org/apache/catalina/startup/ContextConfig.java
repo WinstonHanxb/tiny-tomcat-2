@@ -95,7 +95,7 @@ import org.apache.catalina.Host;
 import com.winston.Lifecycle;
 import com.winston.LifecycleEvent;
 import com.winston.LifecycleListener;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import com.winston.Pipeline;
 import org.apache.catalina.Service;
 import com.winston.Valve;

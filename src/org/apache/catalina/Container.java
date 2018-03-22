@@ -1,6 +1,7 @@
 package org.apache.catalina;
 
 
+import com.winston.Logger;
 import com.winston.Manager;
 
 import java.beans.PropertyChangeListener;

@@ -489,7 +489,7 @@
                         file"
                domain="Catalina"
                 group="Logger"
-                 type="org.org.org.apache.catalina.logger.FileLogger">
+                 type="org.org.com.winston.logger.FileLogger">
 
     <attribute   name="className"
           description="Fully qualified class name of the managed object"
@@ -2420,7 +2420,7 @@
                         System.err"
                domain="Catalina"
                 group="Logger"
-                 type="org.org.org.apache.catalina.logger.SystemErrLogger">
+                 type="org.org.com.winston.logger.SystemErrLogger">
 
     <attribute   name="className"
           description="Fully qualified class name of the managed object"
@@ -2445,7 +2445,7 @@
                         System.out"
                domain="Catalina"
                 group="Logger"
-                 type="org.org.org.apache.catalina.logger.SystemOutLogger">
+                 type="org.org.com.winston.logger.SystemOutLogger">
 
     <attribute   name="className"
           description="Fully qualified class name of the managed object"

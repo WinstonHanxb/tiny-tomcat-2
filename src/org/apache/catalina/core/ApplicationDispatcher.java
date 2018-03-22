@@ -85,7 +85,7 @@ import org.apache.catalina.Globals;
 import org.apache.catalina.HttpRequest;
 import org.apache.catalina.HttpResponse;
 import org.apache.catalina.InstanceEvent;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import org.apache.catalina.Request;
 import org.apache.catalina.Response;
 import org.apache.catalina.Wrapper;

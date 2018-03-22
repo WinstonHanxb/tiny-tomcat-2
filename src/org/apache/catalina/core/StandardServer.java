@@ -100,7 +100,7 @@ import com.winston.Lifecycle;
 import com.winston.LifecycleException;
 import com.winston.LifecycleListener;
 import org.apache.catalina.Loader;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import com.winston.Manager;
 import com.winston.Pipeline;
 import org.apache.catalina.Realm;

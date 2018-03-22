@@ -76,7 +76,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.catalina.Globals;
 import org.apache.catalina.HttpResponse;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import org.apache.catalina.Request;
 import org.apache.catalina.Response;
 import com.winston.ValveContext;

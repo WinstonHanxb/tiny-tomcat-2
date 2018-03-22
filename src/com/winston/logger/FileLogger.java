@@ -62,7 +62,7 @@
  */
 
 
-package org.apache.catalina.logger;
+package com.winston.logger;
 
 
 import java.io.File;
@@ -147,6 +147,7 @@ public class FileLogger
 
     /**
      * Should logged messages be date/time stamped?
+     * 配置文件，确定了是否要在日志文件中打上时间戳
      */
     private boolean timestamp = false;
 
@@ -276,6 +277,7 @@ public class FileLogger
         String tsDate = tsString.substring(0, 10);
 
         // If the date has changed, switch log files
+        // 由于tomcat一次启动会持续很久时间，因此可能需要多次打开和关闭不同的文件
         if (!date.equals(tsDate)) {
             synchronized (this) {
                 if (!date.equals(tsDate)) {
@@ -303,6 +305,7 @@ public class FileLogger
 
     /**
      * Close the currently open log file (if any)
+     * 关闭文件，并做好所有的准备工作
      */
     private void close() {
 
@@ -318,6 +321,7 @@ public class FileLogger
 
     /**
      * Open the new log file for the date specified by <code>date</code>.
+     * 打开指定日期的文件
      */
     private void open() {
 

@@ -25,7 +25,7 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpUtils;
 import org.apache.catalina.HttpResponse;
 import org.apache.catalina.Globals;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import org.apache.catalina.util.CookieTools;
 import org.apache.catalina.util.URL;
 

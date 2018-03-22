@@ -81,7 +81,7 @@ import org.apache.catalina.Engine;
 import org.apache.catalina.Group;
 import org.apache.catalina.Host;
 import org.apache.catalina.Loader;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import com.winston.Manager;
 import org.apache.catalina.Realm;
 import org.apache.catalina.Role;

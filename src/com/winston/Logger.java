@@ -1,7 +1,7 @@
 /*
- * $Header: /home/cvs/jakarta-tomcat-4.0/catalina/src/share/org/apache/catalina/logger/LoggerBase.java,v 1.5 2002/01/25 20:12:20 amyroh Exp $
- * $Revision: 1.5 $
- * $Date: 2002/01/25 20:12:20 $
+ * $Header: /home/cvs/jakarta-tomcat-4.0/catalina/src/share/org/apache/catalina/Logger.java,v 1.3 2001/07/22 20:13:30 pier Exp $
+ * $Revision: 1.3 $
+ * $Date: 2001/07/22 20:13:30 $
  *
  * ====================================================================
  *
@@ -62,64 +62,44 @@
  */
 
 
-package org.apache.catalina.logger;
+package com.winston;
 
 
-import java.beans.PropertyChangeSupport;
-import java.beans.PropertyChangeListener;
-import java.io.CharArrayWriter;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
 import org.apache.catalina.Container;
-import com.winston.LifecycleException;
-import org.apache.catalina.Logger;
+
+import java.beans.PropertyChangeListener;
 
 
 /**
- * Convenience base class for <b>Logger</b> implementations.  The only
- * method that must be implemented is <code>log(String msg)</code>, plus
- * any property setting and lifecycle methods required for configuration.
+ * A <b>Logger</b> is a generic interface for the message and exception
+ * logging methods of the ServletContext interface.  Loggers can be
+ * attached at any Container level, but will typically only be attached
+ * to a Context, or higher level, Container.
  *
  * @author Craig R. McClanahan
- * @version $Revision: 1.5 $ $Date: 2002/01/25 20:12:20 $
+ * @version $Revision: 1.3 $ $Date: 2001/07/22 20:13:30 $
  */
 
-public abstract class LoggerBase
-    implements Logger {
+public interface Logger {
 
 
-    // ----------------------------------------------------- Instance Variables
-
-
-    /**
-     * The Container with which this Logger has been associated.
-     */
-    protected Container container = null;
+    // ----------------------------------------------------- Manifest Constants
 
 
     /**
-     * The debugging detail level for this component.
+     * Verbosity level constants for log messages that may be filtered
+     * by the underlying logger.
      */
-    protected int debug = 0;
 
-    
-    /**
-     * The descriptive information about this implementation.
-     */
-    protected static final String info =
-        "org.LoggerBase/1.0";
+    public static final int FATAL = Integer.MIN_VALUE;
 
+    public static final int ERROR = 1;
 
-    /**
-     * The property change support for this component.
-     */
-    protected PropertyChangeSupport support = new PropertyChangeSupport(this);
+    public static final int WARNING = 2;
 
+    public static final int INFORMATION = 3;
 
-    /**
-     * The verbosity level for above which log messages may be filtered.
-     */
-    protected int verbosity = ERROR;
+    public static final int DEBUG = 4;
 
 
     // ------------------------------------------------------------- Properties
@@ -128,11 +108,7 @@ public abstract class LoggerBase
     /**
      * Return the Container with which this Logger has been associated.
      */
-    public Container getContainer() {
-
-        return (container);
-
-    }
+    public Container getContainer();
 
 
     /**
@@ -140,35 +116,7 @@ public abstract class LoggerBase
      *
      * @param container The associated Container
      */
-    public void setContainer(Container container) {
-
-        Container oldContainer = this.container;
-        this.container = container;
-        support.firePropertyChange("container", oldContainer, this.container);
-
-    }
-
-
-    /**
-     * Return the debugging detail level for this component.
-     */
-    public int getDebug() {
-
-        return (this.debug);
-
-    }
-
-
-    /**
-     * Set the debugging detail level for this component.
-     *
-     * @param debug The new debugging detail level
-     */
-    public void setDebug(int debug) {
-
-        this.debug = debug;
-
-    }
+    public void setContainer(Container container);
 
 
     /**
@@ -176,22 +124,14 @@ public abstract class LoggerBase
      * the corresponding version number, in the format
      * <code>&lt;description&gt;/&lt;version&gt;</code>.
      */
-    public String getInfo() {
-
-        return (info);
-
-    }
+    public String getInfo();
 
 
     /**
      * Return the verbosity level of this logger.  Messages logged with a
      * higher verbosity than this level will be silently ignored.
      */
-    public int getVerbosity() {
-
-        return (this.verbosity);
-
-    }
+    public int getVerbosity();
 
 
     /**
@@ -200,33 +140,7 @@ public abstract class LoggerBase
      *
      * @param verbosity The new verbosity level
      */
-    public void setVerbosity(int verbosity) {
-
-        this.verbosity = verbosity;
-
-    }
-
-
-    /**
-     * Set the verbosity level of this logger.  Messages logged with a
-     * higher verbosity than this level will be silently ignored.
-     *
-     * @param verbosityLevel The new verbosity level, as a string
-     */
-    public void setVerbosityLevel(String verbosity) {
-
-        if ("FATAL".equalsIgnoreCase(verbosity))
-            this.verbosity = FATAL;
-        else if ("ERROR".equalsIgnoreCase(verbosity))
-            this.verbosity = ERROR;
-        else if ("WARNING".equalsIgnoreCase(verbosity))
-            this.verbosity = WARNING;
-        else if ("INFORMATION".equalsIgnoreCase(verbosity))
-            this.verbosity = INFORMATION;
-        else if ("DEBUG".equalsIgnoreCase(verbosity))
-            this.verbosity = DEBUG;
-
-    }
+    public void setVerbosity(int verbosity);
 
 
     // --------------------------------------------------------- Public Methods
@@ -237,11 +151,7 @@ public abstract class LoggerBase
      *
      * @param listener The listener to add
      */
-    public void addPropertyChangeListener(PropertyChangeListener listener) {
-
-        support.addPropertyChangeListener(listener);
-
-    }
+    public void addPropertyChangeListener(PropertyChangeListener listener);
 
 
     /**
@@ -252,7 +162,7 @@ public abstract class LoggerBase
      * @param message A <code>String</code> specifying the message to be
      *  written to the log file
      */
-    public abstract void log(String msg);
+    public void log(String message);
 
 
     /**
@@ -266,11 +176,7 @@ public abstract class LoggerBase
      * @param exception An <code>Exception</code> to be reported
      * @param msg The associated message string
      */
-    public void log(Exception exception, String msg) {
-
-        log(msg, exception);
-
-    }
+    public void log(Exception exception, String msg);
 
 
     /**
@@ -279,28 +185,11 @@ public abstract class LoggerBase
      * and type of the servlet log file is specific to the servlet container,
      * usually an event log.  This message will be logged unconditionally.
      *
-     * @param msg A <code>String</code> that describes the error or
+     * @param message A <code>String</code> that describes the error or
      *  exception
      * @param throwable The <code>Throwable</code> error or exception
      */
-    public void log(String msg, Throwable throwable) {
-
-        CharArrayWriter buf = new CharArrayWriter();
-        PrintWriter writer = new PrintWriter(buf);
-        writer.println(msg);
-        throwable.printStackTrace(writer);
-        Throwable rootCause = null;
-        if (throwable instanceof LifecycleException)
-            rootCause = ((LifecycleException) throwable).getThrowable();
-        else if (throwable instanceof ServletException)
-            rootCause = ((ServletException) throwable).getRootCause();
-        if (rootCause != null) {
-            writer.println("----- Root Cause -----");
-            rootCause.printStackTrace(writer);
-        }
-        log(buf.toString());
-
-    }
+    public void log(String message, Throwable throwable);
 
 
     /**
@@ -312,12 +201,7 @@ public abstract class LoggerBase
      *  written to the log file
      * @param verbosity Verbosity level of this message
      */
-    public void log(String message, int verbosity) {
-
-        if (this.verbosity >= verbosity)
-            log(message);
-
-    }
+    public void log(String message, int verbosity);
 
 
     /**
@@ -330,12 +214,7 @@ public abstract class LoggerBase
      * @param throwable The <code>Throwable</code> error or exception
      * @param verbosity Verbosity level of this message
      */
-    public void log(String message, Throwable throwable, int verbosity) {
-
-        if (this.verbosity >= verbosity)
-            log(message, throwable);
-
-    }
+    public void log(String message, Throwable throwable, int verbosity);
 
 
     /**
@@ -343,11 +222,7 @@ public abstract class LoggerBase
      *
      * @param listener The listener to remove
      */
-    public void removePropertyChangeListener(PropertyChangeListener listener) {
-
-        support.removePropertyChangeListener(listener);
-
-    }
+    public void removePropertyChangeListener(PropertyChangeListener listener);
 
 
 }

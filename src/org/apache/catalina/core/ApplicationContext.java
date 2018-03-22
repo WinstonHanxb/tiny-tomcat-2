@@ -95,7 +95,7 @@ import org.apache.naming.resources.DirContextURLStreamHandler;
 import org.apache.catalina.Context;
 import org.apache.catalina.Host;
 import org.apache.catalina.HttpRequest;
-import org.apache.catalina.Logger;
+import com.winston.Logger;
 import org.apache.catalina.Wrapper;
 import org.apache.catalina.deploy.ApplicationParameter;
 import org.apache.catalina.util.ServerInfo;
