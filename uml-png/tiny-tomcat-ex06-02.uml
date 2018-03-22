@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.winston.core.SimpleWrapperValve</OriginalElement>
+  <nodes>
+    <node x="281.5" y="0.0">org.apache.catalina.Container</node>
+    <node x="12.0" y="343.0">com.winston.core.SimpleWrapperValve</node>
+    <node x="116.5" y="174.0">com.winston.core.SimpleWrapper</node>
+    <node x="0.0" y="87.0">com.winston.Lifecycle</node>
+    <node x="0.0" y="256.0">com.winston.Valve</node>
+    <node x="286.0" y="87.0">org.apache.catalina.Wrapper</node>
+    <node x="122.0" y="256.0">com.winston.Contained</node>
+    <node x="145.0" y="87.0">com.winston.Pipeline</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.winston.core.SimpleWrapper" target="org.apache.catalina.Wrapper">
+      <point x="59.333333333333314" y="-18.5" />
+      <point x="264.8333333333333" y="149.0" />
+      <point x="349.5" y="149.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.core.SimpleWrapper" target="com.winston.Lifecycle">
+      <point x="-59.33333333333337" y="-18.5" />
+      <point x="146.16666666666663" y="149.0" />
+      <point x="62.5" y="149.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="org.apache.catalina.Wrapper" target="org.apache.catalina.Container">
+      <point x="0.0" y="-18.5" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.core.SimpleWrapper" target="com.winston.Pipeline">
+      <point x="0.0" y="-18.5" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.core.SimpleWrapperValve" target="com.winston.Contained">
+      <point x="54.75" y="-18.5" />
+      <point x="176.25" y="318.0" />
+      <point x="192.0" y="318.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.core.SimpleWrapperValve" target="com.winston.Valve">
+      <point x="-54.75" y="-18.5" />
+      <point x="66.75" y="318.0" />
+      <point x="51.0" y="318.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="209.0" y="190.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

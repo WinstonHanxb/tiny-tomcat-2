@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.winston.core.SimpleContextValve</OriginalElement>
+  <nodes>
+    <node x="278.5" y="0.0">org.apache.catalina.Container</node>
+    <node x="55.5" y="425.0">org.apache.catalina.Mapper</node>
+    <node x="0.0" y="87.0">com.winston.Lifecycle</node>
+    <node x="15.0" y="343.0">com.winston.core.SimpleContextValve</node>
+    <node x="0.0" y="256.0">com.winston.Valve</node>
+    <node x="119.5" y="174.0">com.winston.core.SimpleContext</node>
+    <node x="286.0" y="87.0">org.apache.catalina.Context</node>
+    <node x="122.0" y="256.0">com.winston.Contained</node>
+    <node x="0.0" y="512.0">com.winston.core.SimpleContextMapper</node>
+    <node x="145.0" y="87.0">com.winston.Pipeline</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.winston.core.SimpleContextValve" target="com.winston.Contained">
+      <point x="53.25" y="-18.5" />
+      <point x="174.75" y="318.0" />
+      <point x="192.0" y="318.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.core.SimpleContext" target="com.winston.Pipeline">
+      <point x="0.0" y="-18.5" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="org.apache.catalina.Context" target="org.apache.catalina.Container">
+      <point x="0.0" y="-18.5" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.core.SimpleContextMapper" target="org.apache.catalina.Mapper">
+      <point x="0.0" y="-18.5" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.core.SimpleContextValve" target="com.winston.Valve">
+      <point x="-53.25" y="-18.5" />
+      <point x="68.25" y="318.0" />
+      <point x="51.0" y="318.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.core.SimpleContext" target="com.winston.Lifecycle">
+      <point x="-57.33333333333334" y="-18.5" />
+      <point x="148.16666666666666" y="149.0" />
+      <point x="62.5" y="149.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="com.winston.core.SimpleContext" target="org.apache.catalina.Context">
+      <point x="57.333333333333314" y="-18.5" />
+      <point x="262.8333333333333" y="149.0" />
+      <point x="346.5" y="149.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="207.5" y="274.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

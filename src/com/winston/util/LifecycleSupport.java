@@ -159,6 +159,7 @@ public final class LifecycleSupport {
 
         LifecycleEvent event = new LifecycleEvent(lifecycle, type, data);
         LifecycleListener interested[] = null;
+        //复制现有的监听器，重新出发
         synchronized (listeners) {
             interested = (LifecycleListener[]) listeners.clone();
         }

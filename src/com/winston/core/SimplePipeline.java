@@ -1,15 +1,12 @@
 package com.winston.core;
 
-import com.winston.Contained;
-import com.winston.Pipeline;
-import com.winston.Valve;
-import com.winston.ValveContext;
+import com.winston.*;
 import org.apache.catalina.*;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
 
-public class SimplePipeline implements Pipeline {
+public class SimplePipeline implements Pipeline, Lifecycle {
 
   public SimplePipeline(Container container) {
     setContainer(container);
@@ -54,18 +51,33 @@ public class SimplePipeline implements Pipeline {
   public void invoke(Request request, Response response)
     throws IOException, ServletException {
     // Invoke the first Valve in this pipeline for this request
-    (new SimplePipelineValveContext()).invokeNext(request, response);
+   (new StandardPipelineValveContext()).invokeNext(request, response);
   }
 
   public void removeValve(Valve valve) {
   }
 
+  // implementation of the Lifecycle interface's methods
+  public void addLifecycleListener(LifecycleListener listener) {
+  }
+
+  public LifecycleListener[] findLifecycleListeners() {
+    return null;
+  }
+
+  public void removeLifecycleListener(LifecycleListener listener) {
+  }
+
+  public synchronized void start() throws LifecycleException {
+  }
+
+  public void stop() throws LifecycleException {
+  }
+
   // this class is copied from org.apache.catalina.core.StandardPipeline class's
   // StandardPipelineValveContext inner class.
-  protected class SimplePipelineValveContext implements ValveContext {
-
+  protected class StandardPipelineValveContext implements ValveContext {
     protected int stage = 0;
-
     public String getInfo() {
       return null;
     }

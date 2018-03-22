@@ -1,8 +1,9 @@
 package com.winston.core;
 
-import org.apache.catalina.Container;
-import org.apache.catalina.DefaultContext;
-import org.apache.catalina.Loader;
+import com.winston.Lifecycle;
+import com.winston.LifecycleException;
+import com.winston.LifecycleListener;
+import org.apache.catalina.*;
 
 import java.beans.PropertyChangeListener;
 import java.io.File;
@@ -11,12 +12,10 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.net.URLStreamHandler;
 
-//协助加载servlet
-public class SimpleLoader implements Loader {
+public class SimpleLoader implements Loader, Lifecycle {
 
   public static final String WEB_ROOT =
     System.getProperty("user.dir") + File.separator  + "webroot";
-
   ClassLoader classLoader = null;
   Container container = null;
 
@@ -33,9 +32,7 @@ public class SimpleLoader implements Loader {
       System.out.println(e.toString() );
     }
 
-
   }
-
   public ClassLoader getClassLoader() {
     return classLoader;
   }
@@ -88,6 +85,24 @@ public class SimpleLoader implements Loader {
   }
 
   public void removePropertyChangeListener(PropertyChangeListener listener) {
+  }
+
+  // implementation of the Lifecycle interface's methods
+  public void addLifecycleListener(LifecycleListener listener) {
+  }
+
+  public LifecycleListener[] findLifecycleListeners() {
+    return null;
+  }
+
+  public void removeLifecycleListener(LifecycleListener listener) {
+  }
+
+  public synchronized void start() throws LifecycleException {
+    System.out.println("Starting SimpleLoader");
+  }
+
+  public void stop() throws LifecycleException {
   }
 
 }

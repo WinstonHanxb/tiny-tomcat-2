@@ -34,7 +34,6 @@ public class SimpleContextValve implements Valve, Contained {
     // Select the Wrapper to be used for this Request
     Wrapper wrapper = null;
     try {
-      //利用mapper
       wrapper = (Wrapper) context.map(request, true);
     }
     catch (IllegalArgumentException e) {
